@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
                     parking.apply {
                         txtParkingName.text = titleParking
                         txtAddress.text = getAddress(position)
-                        txtFreePlaces.text = getString(R.string.text_free_places, )
+                        txtFreePlaces.text = getString(R.string.text_free_places, 10.toString())
                     }
                 }
             }
