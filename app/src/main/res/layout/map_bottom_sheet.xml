@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_sheet"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/_200sdp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <ImageView
+        android:id="@+id/img_rect_bottom_sheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@drawable/rect_bottom_sheet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_bottom_sheet_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="@string/bottom_sheet_title"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_rect_bottom_sheet" />
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:src="@drawable/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_bottom_sheet_title" />
+
+    <TextView
+        android:id="@+id/txt_parking_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:fontFamily="@font/ubuntu_mono_bold"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toStartOf="@id/card_with_img"
+        app:layout_constraintStart_toStartOf="@id/line"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        tools:text="Saint-Petersburg Parking" />
+
+    <TextView
+        android:id="@+id/txt_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintEnd_toStartOf="@id/card_with_img"
+        app:layout_constraintStart_toStartOf="@id/txt_parking_name"
+        app:layout_constraintTop_toBottomOf="@id/txt_parking_name"
+        tools:text="555 Jackson St, SP" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_with_img"
+        android:layout_width="@dimen/_83sdp"
+        android:layout_height="@dimen/_86sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="@+id/line"
+        app:layout_constraintTop_toBottomOf="@id/line">
+
+        <ImageView
+            android:id="@+id/img_parking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/park" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/img_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:src="@drawable/car"
+        app:layout_constraintStart_toStartOf="@id/txt_address"
+        app:layout_constraintTop_toBottomOf="@id/txt_address" />
+
+    <TextView
+        android:id="@+id/txt_free_places"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@id/img_car"
+        app:layout_constraintEnd_toStartOf="@id/card_with_img"
+        app:layout_constraintStart_toEndOf="@id/img_car"
+        app:layout_constraintTop_toTopOf="@id/img_car"
+        tools:text="@string/text_free_places" />
+
+
+    <!--
+        <ImageView
+            android:id="@+id/img_parking"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/line"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@id/line"/>
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

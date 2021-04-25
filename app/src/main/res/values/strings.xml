@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Parking</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyB3AFv21z3D2DN0y1t9r8tXj9MVyrLCaXQ</string>
+    <string name="bottom_sheet_title">This car park is 40 meters away</string>
+    <string name="get_address_error">Can\'t find address!</string>
+    <string name="text_free_places">%s free places</string>
 </resources>

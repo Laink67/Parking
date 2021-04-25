@@ -11,6 +11,15 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.Launcher" parent="Theme.Parking">
+        <item name="android:windowBackground">@drawable/launcher</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="27">@android:color/transparent</item>
+        <item name="android:statusBarColor" tools:targetApi="23">@color/white</item>
+    </style>
+
 </resources>
